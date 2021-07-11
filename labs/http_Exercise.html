@@ -8,96 +8,45 @@
 </head>
 <body>
     <div>
-    1.What is the Hypertext Transfer Protocol (HTTP)?
-    <br>
-    Ans: Http is a protocol which allows the fetching of resources, such as HTML documents. It is the fundación of any data exchange on the web, and it is a client-server protocol,
-     which means requests are initiated by the recipient, usually the web browser.
-     <br>
-     <br>
-     2.Why is HTTP called a stateless protocol?
-     <br>
-    Ans: Http is called as a stateless protocol because each request is executed independently without any knowledge of the requests that were 
-    executed before it, which means once the transaction ends the conection between the browser and the server is lost.
-    <br>
-    <br>
-    3.Describe the three phases of establishing a session using client-server protocols such as HTTP
-    <br>
-    Ans: Three phases of establishing a session using client-server protocols such as http are as follows:
+1. What is the Hypertext Transfer Protocol (HTTP)<br>
+The Hypertext Transfer Protocol is an application layer protocol for distributed, collaborative, hypermedia information systems<br><br>
 
-    <br>
-      a. Establishing a connection
-    In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying 
-    transport layer, usually this is TCP.
-    <br>
+2. Why is HTTP called a stateless protocol?<br>
+HTTP is called as a stateless protocol because each request is executed independently, without any knowledge of the requests that were executed before it, which means once the transaction ends the connection between the brows
+<br><br>
+3. Describe the three phases of establishing a session using client-server protocols such as HTTP<br>
 
-      b. Sending a client request
-    Once the connection is established, the user-agent can send the request. A client request consists of text directives, 
-    separated by CRLF which is divided into three blocks.
-    <br>
-    
-      c. Structure of a server response
-    After the connected agent has sent its request, the web server processes it and ultimately returns a response. Similar to a client request, a server response is formed of text directives,
-     separated by CRLF, though divided into three blocks:
-    The first line, the status line, consists of an acknowledgment of the HTTP version used, followed by a status request then
-    Subsequent lines represent specific HTTP headers, giving the client information about the data sent.Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
-    The final block is a data block, which contains the optional data.
-    <br>
-    <br>
-    4.Describe the parameters on a get and post request.
-    <br>
-    Ans: The parameters on get is used to request data from a specifiend resources.Also it is most common http methods.
-    <br>
-    The parameters on Post request is used to send data to a server to create/update a resource. 
-    <br>
-    <br>
-    5.What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?
-    <br>
-    Ans: Http response status codes indicate whether a specific http requests has been successfully completed. They are grouped into five classes: 
-     
-    <br>
-     a. Informational responses
-     <br>
-     b. Successful responses
-     <br>
-     c. Redirects
-     <br>
-     d. Client errores
-     <br>
-     e. Server errors
-   <br>
-   The status code 200 indicates that the requests was received and understood and is being processed.
-   <br>
-   The status code 404  is a http standard response code to indicate that the browser was able to communicate with a given server, but the server could not find what was requested
-   <br>
-   <br>
-   6.What are HTTP cookies? Give an example.
-   <br>
-   Ans: Http cookie is a small piece of data that a server sends to the user's web browser. Browser nay store it and send it back with later requests to the same server. It's used to tell if two requests came from the same browser-keeping a user logged-in, 
-   for example. It remembers stateful information for the stateless http protocol.
-   <br>
-   <br>
-   7.Why are cookies a security issue?
-   <br>
-   Ans: As an Internet user, it is wise to understand the risks of cookies ao that you can view and delete them when necessary.
-   Privacy invasion:  significant search engines and other advertising platforms tracción users and use the information to deliver trageted ads. Naturally, gross invasion of privacy
-   <br>
-   Cookie fraud : with Internet cookie fraud, cookie are used to either falsify the identity if legitimate user to perform malicious acts.
-   <br>
-   <br>
-   8.Describe session hijacking and XSS
-   <br>
-   Ans: Session hijacking also known as cookie hijacking is the expliotation of a valid computer session to gain unauthorized access to information or services in a computar system.
-   <br>
-   XSS is a type of injection security attack in which  an attacker  injects data, such as malicious script,  into content from otherwise trusted websites.
-   9. Describe Cross-site request forgery(CSRF)
-   <br>
-   Ans: Cross site request forgery is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated
-    <br>
-    <br>
-   10.What are Cross-site HTTP requests (CORS) and what requests use CORS?
-   <br>
-   Ans: Cross Origin Resource Sharing (CORS) is a W3C standard that allows a server to relax the same-origin policy. It is not a security feature, CORS relaxes security.
-   The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests.
+The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).<br>
+The client sends its request, and waits for the answer.<br>
+The server processes the request, sending back its answer, providing a status code and appropriate data as well as any relevant data.<br>
+
+4. Describe the parameters on a get and post request.<br>
+Both GET and POST method is used to transfer data from client to server in HTTP protocol but Main difference between POST and GET method is that GET carries request parameter appended in URL string while POST carries request parameter in message body which makes it more secure way of transferring data from client to server in http protocol.<br><br>
+
+5. What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?.<br>
+HTTP status code 200 - the request has succeeded.<br>
+HTTP status code 404 - the server was unable to find the requested resource.<br><br>
+
+6. What are HTTP cookies? Give an example.<br>
+An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with later requests to the same server. Typically, it's used to tell if two requests came from the same browser — keeping a user logged-in, for example. It remembers stateful information for the stateless HTTP protocol
+<br><br>
+7. Why are cookies a security issue?<br>
+Since the data in cookies doesn't change, cookies themselves aren't harmful. They can't infect computers with viruses or other malware. However, some cyberattacks can hijack cookies and enable access to your browsing sessions. The danger lies in their ability to track individuals' browsing histories.<br><br>
+
+8. Describe session hijacking and XSS<br>
+Session hijacking is an attack where a user session is taken over by an attacker. A session starts when you log into a service, for example your banking application, and ends when you log out. The attack relies on the attacker’s knowledge of your session cookie, so it is also called cookie hijacking or cookie side-jacking. Although any computer session could be hijacked, session hijacking most commonly applies to browser sessions and web applications.<br><br>
+
+
+9. Describe Cross-site request forgery(CSRF)<br><br>
+Cross site request forgery (CSRF), also known as XSRF, Sea Surf or Session Riding, is an attack vector that tricks a web browser into executing an unwanted action in an application to which a user is logged in. A successful CSRF attack can be devastating for both the business and user.<br><br>
+
+10. What are Cross-site HTTP requests (CORS) and what requests use CORS?<br>
+
+Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme, or port) than its own from which a browser should permit loading of resources.<br><br>
+
+
+
+
      </div>
 </body>
 </html>
